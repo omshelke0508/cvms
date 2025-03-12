@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Visitor Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Visitor Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Visitor Management Dashboard</h1>
+
+        <!-- Visitor Entry Form -->
+        <form id="visitorForm" onsubmit="addVisitor(event)">
+            <label for="visitorName">Visitor Name</label>
+            <input type="text" id="visitorName" required>
+
+            <label for="purpose">Purpose of Visit</label>
+            <input type="text" id="purpose" required>
+
+            <label for="visitDate">Visit Date</label>
+            <input type="date" id="visitDate" required>
+
+            <label for="visitTime">Visit Time</label>
+            <input type="time" id="visitTime" required>
+
+            <label for="meetingPerson">Meeting With</label>
+            <input type="text" id="meetingPerson" required>
+
+            <button type="submit">Add Visitor</button>
+        </form>
+
+        <!-- Visitor Records Display -->
+        <h2>Visitor Records</h2>
+        <table id="visitorRecords">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Purpose</th>
+                    <th>Visit Date</th>
+                    <th>Visit Time</th>
+                    <th>Meeting Person</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Records will go here -->
+            </tbody>
+        </table>
+
+        <!-- Download Button -->
+        <button onclick="downloadPDF()">Download Records as PDF</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+
